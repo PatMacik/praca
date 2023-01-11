@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+    <head>
+        <meta charset="utf-8" />
+        <title>CSGO</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Patryk">
+       
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+           body{
+           display:flex;
+           align-items: center;
+           justify-content: center;
+           font-family: 'Poppins', sans-serif;
+           background: #2f2f2f;
+           color:white;
+           
+           }
+          
+          h1 {
+            color: #fe6f27;
+            font-size:50px;
+            text-shadow: 1px 1px 1px white, 0px 0px 2px white;
+          }
+        
+          .question{
+            color:#6bf2f0;
+          }
+          .box {
+            padding: 10px;
+            background: #3f3f3f;
+            border-radius:10px;
+            border-color:#fe6f27;
+            border-width: 2px;
+            border-style:solid;
+          }
+          .nick, .password, .year, .gender, .accept, .weapon, .maps, .words, .register, .back{
+            border:none;
+            outline:none;
+            padding:15px;
+            border-radius: 25px;
+            background: #4b4a4a;
+            margin-bottom: 10px;
+          }
+          .register, .back {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .words textarea{
+            width:75%;
+            height:65px;
+          }
+          .register {
+            padding-bottom: 15px;
+          }
+         
+          .register input {
+            background-color:rgb(59, 175, 59);
+            color:rgb(255, 255, 255);
+            width:40%;
+            height: 50px;
+            cursor:pointer;
+            border-radius:10px;
+            border: none;
+            font-weight: bold;
+            font-size:17px;
+          }
+          .Back {
+            background-color:#fe6f27;
+            color:white;
+            border:none;
+            width: 250px;
+            height: 50px;
+            cursor:pointer;
+            border-radius:10px;
+            border: none;
+            font-weight: bold;
+            font-size: 80%;
+          }
+        </style>
+    </head>
+    <body>
+        
+        <div class="box">
+            <form action="new.php" method="post">
+            <div class="top">
+                <div class="login">
+                    <img src="counter-strike-global-offensive.jpg">
+                </div>
+            <h1> FORMULARZ </h1> 
+            </div>
+            <div class="nick">
+                <div class="question">Nickname</div> 
+                    <input type="text"  name="nick" placeholder="Istniejący nick z CS">
+            </div>
+            <div class="password">
+                <div class="question">Hasło</div>
+                    <input type="password" name="password">
+                <div class="question">Powtórz hasło</div>
+                    <input type="password" name="password_confirm">
+            </div>
+            <div class="year">
+                <div class="question">Rok urodzenia</div>
+                    <input type="number" name="year">
+            </div>
+            <div class="gender">
+                <div class="question">Płeć</div>
+                    <input type="radio" name="gender" checked> Mężczyzna
+            <input type="radio" name="gender"> Kobieta
+            </div>
+            <div class="accept">
+                <div>
+                    <input type="checkbox" checked name="rules">
+            Akceptuję regulamin serwisu 
+            
+            </div>
+                <div>
+                    <input type="checkbox" name="newsletters">
+            Wyrażam zgodę na otrzymywanie newslettera
+            
+            </div>
+            
+            </div>
+            <div class="weapon">
+                <div class="question">Ulubiona broń</div>
+                <select name="weapon">
+                    <option value="five_seven">Five-SeveN</option>
+                    <option value="desert_eagle">Desert Eagle</option>
+                    <option value="PP-Bizon">PP-Bizon</option>
+                    <option value="AWP">AWP</option>
+                    <option value="MP9">MP9</option>
+                    <option value="AK-47">AK-47</option>
+                </select>
+            </div>
+            <div class="maps">
+                <div class="question">Ulubione mapy</div>
+                    <select name="maps" multiple>
+                        <option value="dust_2">Dust II</option>
+                        <option value="mirage">Mirage</option>
+                        <option value="cache">Cache</option>
+                        <option value="inferno">Inferno</option>
+                        <option value="nuke">Nuke</option>
+                        <option value="train">Train</option>
+                    </select>
+            </div>
+            <div class="words">
+                <div class="question">Kilka słów o sobie</div>
+                    <small>Opisz swoją przygodę z CS:GO, dlaczego wybrałeś akurat nasz klan?</small> <br>
+                     <textarea id="about_me" name="about_me"></textarea>
+            </div>
+                <div class="register">
+                    <input type="submit" value="Zarejestruj się!">
+            </div>
+            </form>
+                <div class="back">
+                    <a href="index.html"> <button class="Back"> Strona główna </button></a>
+            </div>
+    </div>
+
+    
+
+      </body>
+    </html>
+    
+
